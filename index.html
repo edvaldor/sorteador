@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteio de Temas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    #resultado {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Sorteio de Temas para Trabalho</h1>
+  <button onclick="sortearTema()">Sortear Tema</button>
+  <div id="resultado"></div>
+
+  <script>
+    const temas = [
+      "Inteligência Artificial",
+      "Mudanças Climáticas",
+      "Energia Renovável",
+      "Ética na Tecnologia",
+      "Desigualdade Social",
+      "Cultura Digital",
+      "História da Internet",
+      "Sustentabilidade Urbana",
+      "Impacto da Mídia",
+      "Economia Global"
+    ];
+
+    function sortearTema() {
+      const indiceSorteado = Math.floor(Math.random() * temas.length);
+      const tema = temas[indiceSorteado];
+      document.getElementById("resultado").innerText = "Tema sorteado: " + tema;
+    }
+  </script>
+
+</body>
+</html>
